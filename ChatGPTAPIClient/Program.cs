@@ -2,7 +2,7 @@ using ChatGPTAPIClient.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Bind MySettings
+//Bind Secrets to get secrets from appsetting.json
 var Secrets = builder.Configuration.GetSection("Secrets").Get<Secrets>();
 if (Secrets?.ApiKey?.StartsWith("sk") == true)
 {
